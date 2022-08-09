@@ -247,6 +247,15 @@ console.log("Appended Cuisine Types that are vegeterian: ", appendedCuisineTypes
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+function findDishIncluesChickpea() {
+  let results = dishes.filter(function (el){
+    return el.ingredients.includes("chickpea");
+  });
+return results;
+}
+
+let dishIncludesChickpea = findDishIncluesChickpea();
+console.log("Dishes with chickpea: ", dishIncludesChickpea)
 
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
