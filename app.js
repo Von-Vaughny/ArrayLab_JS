@@ -271,3 +271,11 @@ let totalServing = findTotalServing();
 console.log("Total Servings: ", totalServing)
 
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
+function findUniqueCuisineTypes() {
+  let cuisineTypes = dishes.map(function (el) {return el.cuisine});
+  let results = dishes.filter(function (el) {return cuisineTypes.indexOf(el.cuisine) == cuisineTypes.lastIndexOf(el.cuisine)})
+  return results;
+};
+
+let uniqueCuisine = findUniqueCuisineTypes();
+console.log("Unique Cuisine Type: ", uniqueCuisine);
