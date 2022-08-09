@@ -135,7 +135,7 @@ function findVegetarianFood() {
 }
 
 let vegetarianFood = findVegetarianFood();
-console.log("Vegetarian Foods", vegetarianFood);
+console.log("Vegetarian Foods: ", vegetarianFood);
 
 //2. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
 //Filter
@@ -151,7 +151,7 @@ function findItalianFoodServingSize() {
 }
 
 let italianFoodServingSize = findItalianFoodServingSize();
-console.log("Italian Food w/5+ Serving Size", italianFoodServingSize);
+console.log("Italian Food w/5+ Serving Size: ", italianFoodServingSize);
 
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
@@ -167,7 +167,7 @@ function findServingIDCount() {
 }
 
 let servingIdCount = findServingIDCount();
-console.log("Dishes with serving id matching serving count", servingIdCount);
+console.log("Dishes with serving id matching serving count: ", servingIdCount);
 
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
@@ -183,7 +183,7 @@ function findEvenServingCount() {
 }
 
 let evenServingCount = findEvenServingCount();
-console.log("Dishes with even serving count", evenServingCount);
+console.log("Dishes with even serving count: ", evenServingCount);
 
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
@@ -199,10 +199,19 @@ function findTomatoCheese() {
 }
 
 let tomatoCheese = findTomatoCheese();
-console.log('Dishes with ingredients "tomato" and "cheese"', tomatoCheese);
+console.log('Dishes with ingredients "tomato" and "cheese": ', tomatoCheese);
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
+function findCuisineTypes() {
+  let results = dishes.map(function (el) {
+    return el.cuisine;
+  });
+return results;
+}
+
+let cuisineTypes = findCuisineTypes();
+console.log("Cusines: ", cuisineTypes);
 
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
