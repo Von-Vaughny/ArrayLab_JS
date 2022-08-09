@@ -142,9 +142,9 @@ console.log("Vegetarian Foods", vegetarianFood);
 function findItalianFoodServingSize() {
   let results = dishes.filter(function (el){
     if (el.cuisine === "Italian" && el.servings > 5){
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
   });
   return results;
@@ -158,9 +158,9 @@ console.log("Italian Food w/5+ Serving Size", italianFoodServingSize);
 function findServingIDCount() {
   let results = dishes.filter(function (el) {
     if (el.id === el.servings) {
-      return true
+      return true;
     } else{
-      return false
+      return false;
     }
   });
   return results;
@@ -174,9 +174,9 @@ console.log("Dishes with serving id matching serving count", servingIdCount);
 function findEvenServingCount() {
   let results = dishes.filter(function (el) {
     if (el.servings %2 == 0) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
   });
   return results;
@@ -187,6 +187,19 @@ console.log("Dishes with even serving count", evenServingCount);
 
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
+function findTomatoCheese() {
+  let results = dishes.filter(function (el) {
+    if (el.ingredients.length == 2 && el.ingredients.includes("tomato") && el.ingredients.includes("cheese")) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return results;
+}
+
+let tomatoCheese = findTomatoCheese();
+console.log('Dishes with ingredients "tomato" and "cheese"', tomatoCheese);
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
